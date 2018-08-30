@@ -6,7 +6,7 @@ import java.nio.file.Paths
 import java.util.*
 import kotlin.streams.toList
 
-internal class PointsLoader(private val fileName: String) {
+class PointsLoader(private val fileName: String) {
     private val points: MutableList<String> = mutableListOf()
     private val random: Random = Random()
 

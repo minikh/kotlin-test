@@ -5,7 +5,7 @@ import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Paths
 
-internal class OperationsGenerator(
+class OperationsGenerator(
         private val operationsFileName: String,
         private val amountGenerator: AmountGenerator,
         private val timeGenerator: TimeGenerator,

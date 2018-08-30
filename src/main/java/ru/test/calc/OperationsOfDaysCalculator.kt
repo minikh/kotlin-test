@@ -4,7 +4,7 @@ import ru.test.Operation
 import java.math.BigDecimal
 import java.util.*
 
-class OperationsOfDaysCalculator internal constructor() : Calculator {
+class OperationsOfDaysCalculator : Calculator {
 
     private val operations: MutableMap<String, BigDecimal> = HashMap()
 

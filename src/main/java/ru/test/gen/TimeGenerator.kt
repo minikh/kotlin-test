@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit
 import java.util.*
 
-internal class TimeGenerator {
+class TimeGenerator {
     private val from: LocalDateTime
     private val random: Random = Random()
     private val days: Long
