@@ -14,7 +14,7 @@ class OperationsGenerator(
 
     fun generate(countOperations: Long) {
         try {
-            Files.newBufferedWriter(Paths.get(operationsFileName)).use { bufferedWriter ->
+            Files.newBufferedWriter(Paths.get(operationsFileName)).use {
                 for (operationNumber in 0 until countOperations) {
                     val operation = Operation(
                             date = timeGenerator.generate(),
@@ -23,12 +23,11 @@ class OperationsGenerator(
                             amount = amountGenerator.next()
                     )
 
-                    bufferedWriter.write(operation.print())
+                    it.write(operation.print())
                 }
             }
         } catch (e: IOException) {
             e.printStackTrace()
         }
-
     }
 }

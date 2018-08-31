@@ -22,10 +22,7 @@ class PointsLoader(private val fileName: String) {
     fun load() {
         val pointsPath = Paths.get(fileName)
         try {
-            Files.newBufferedReader(pointsPath).lines().use { lineStream ->
-
-                points.addAll(lineStream.toList())
-            }
+            Files.newBufferedReader(pointsPath).lines().use { points.addAll(it.toList()) }
         } catch (e: IOException) {
             throw RuntimeException(e)
         }
